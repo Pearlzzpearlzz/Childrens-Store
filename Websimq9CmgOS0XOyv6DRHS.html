@@ -1,0 +1,251 @@
+<html><head><base href="https://pearlzz.com/products">
+<title>Pearlzz - Our Products</title>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f0f5;
+    color: #333;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+header {
+    background-color: #ffb6c1;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #4a0e2e;
+}
+.sidebar {
+    width: 200px;
+    background-color: #ffd1dc;
+    padding: 20px;
+    padding-top: 100px;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #4a0e2e;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.sidebar ul li a:hover {
+    color: #ff69b4;
+}
+main {
+    flex-grow: 1;
+    padding: 100px 40px 40px;
+}
+h1 {
+    color: #4a0e2e;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.product-card h3 {
+    margin: 10px 0;
+    color: #4a0e2e;
+}
+.product-card p {
+    color: #ff69b4;
+    font-weight: bold;
+}
+.category-filter {
+    margin-bottom: 20px;
+}
+.category-filter button {
+    background-color: #ffd1dc;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.category-filter button:hover,
+.category-filter button.active {
+    background-color: #ffb6c1;
+}
+footer {
+    background-color: #ffb6c1;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/products">Products</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/products">Products</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h1>Our Products</h1>
+        
+        <div class="category-filter">
+            <button class="active" data-category="all">All</button>
+            <button data-category="girls">Girls</button>
+            <button data-category="boys">Boys</button>
+            <button data-category="pajamas">Pajamas</button>
+            <button data-category="socks">Socks</button>
+            <button data-category="shoes">Shoes</button>
+            <button data-category="toys">Educational Toys</button>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" data-category="girls pajamas">
+                <img src="https://pearlzz.com/images/girl-unicorn-pajama.jpg" alt="Pink pajama set with unicorn print for girls" width="180" height="180">
+                <h3>Unicorn Dreams Pajama Set</h3>
+                <p>$24.99</p>
+            </div>
+            <div class="product-card" data-category="boys socks">
+                <img src="https://pearlzz.com/images/boy-dino-socks.jpg" alt="Pack of colorful boy's socks with dinosaur patterns" width="180" height="180">
+                <h3>Dino-mite Socks Pack</h3>
+                <p>$12.99</p>
+            </div>
+            <div class="product-card" data-category="girls shoes">
+                <img src="https://pearlzz.com/images/girl-sparkle-shoes.jpg" alt="Pink glittery shoes for girls" width="180" height="180">
+                <h3>Sparkle Step Shoes</h3>
+                <p>$34.99</p>
+            </div>
+            <div class="product-card" data-category="toys">
+                <img src="https://pearlzz.com/images/alphabet-blocks.jpg" alt="Colorful wooden alphabet blocks" width="180" height="180">
+                <h3>ABC Learning Blocks</h3>
+                <p>$29.99</p>
+            </div>
+            <div class="product-card" data-category="boys pajamas">
+                <img src="https://pearlzz.com/images/boy-space-pajama.jpg" alt="Blue pajama set with space theme for boys" width="180" height="180">
+                <h3>Space Explorer Pajama Set</h3>
+                <p>$26.99</p>
+            </div>
+            <div class="product-card" data-category="girls socks">
+                <img src="https://pearlzz.com/images/girl-floral-socks.jpg" alt="Pack of girl's socks with floral patterns" width="180" height="180">
+                <h3>Flower Power Socks Pack</h3>
+                <p>$14.99</p>
+            </div>
+            <div class="product-card" data-category="boys shoes">
+                <img src="https://pearlzz.com/images/boy-sneakers.jpg" alt="Comfortable sneakers for boys in blue and gray" width="180" height="180">
+                <h3>Adventure Seeker Sneakers</h3>
+                <p>$39.99</p>
+            </div>
+            <div class="product-card" data-category="toys">
+                <img src="https://pearlzz.com/images/shape-sorter.jpg" alt="Colorful shape sorter toy" width="180" height="180">
+                <h3>Shape Sorter Challenge</h3>
+                <p>$19.99</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2023 Pearlzz. All rights reserved.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+
+    function setActiveLink(links) {
+        links.forEach(link => {
+            if (link.getAttribute('href') === window.location.pathname) {
+                link.style.color = '#ff69b4';
+            }
+        });
+    }
+
+    setActiveLink(navLinks);
+    setActiveLink(sidebarLinks);
+
+    const filterButtons = document.querySelectorAll('.category-filter button');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            productCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+</body></html>
